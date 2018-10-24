@@ -7,20 +7,19 @@ function onCreated(n) {
 }
 
 const menuItemParams = {
-  id: "close_left",
+  id: "close_right",
   title: browser.i18n.getMessage("contextItemTitle"),
   contexts: ["tab"]
 };
 browser.contextMenus.create(menuItemParams, onCreated);
 
 function closeTabs(sender, tabs) {
+    var isOkToClose = false;
     for (var tab of tabs) {
-        if (tab.id == sender.id) {
-            break;
-        }
-        if (!tab.pinned) {
+        if (isOkToClose && !tab.pinned)
             browser.tabs.remove(tab.id);
-        }
+        if(tab.id == sender.id)
+            isOkToClose = true;
     }
 }
 

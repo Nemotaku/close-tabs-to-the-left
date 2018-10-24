@@ -6,7 +6,7 @@
   },
 
   "description": "__MSG_extensionDescription__",
-  "homepage_url": "https://github.com/mkopec/close-tabs-to-the-left",
+  "homepage_url": "https://github.com/Nemotaku/close-tabs-to-the-right",
   "manifest_version": 2,
   "name": "__MSG_extensionName__",
   "version": "1.4.1",
